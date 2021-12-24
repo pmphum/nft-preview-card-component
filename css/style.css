@@ -1,0 +1,146 @@
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --veryDarkBlueMbg: hsl(217, 54%, 11%);
+    --veryDarkBlueBg: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: var(--veryDarkBlueMbg);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.125rem;
+    color: var(--softBlue);
+    padding: 1.25rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container .nft-img{
+    position: relative;
+}
+
+.container .nft-img div{
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 60%);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity:0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.container .nft-img div img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.container .nft-img div:hover{
+    
+    cursor: pointer;
+    opacity: 1;
+
+}
+
+
+p{
+    font-weight: 300;
+}
+
+ul{
+    list-style: none;
+    
+}
+
+.container{
+    padding: 1.25rem;
+    background-color: var(--veryDarkBlueBg);
+    border-radius: 0.5rem;
+}
+
+.container h4{
+    font-size: 1.5rem;
+    color: var(--White);
+    margin: 1rem 0.5rem 0.5rem 0;
+}
+
+.container h4:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.container ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--softBlue);
+}
+
+.container ul li {
+    display: flex;
+    align-items: center;
+}
+
+.container ul img{
+    margin-right: 0.5rem;
+}
+
+
+.container ul li:first-child{
+    color: var(--Cyan);
+}
+
+.container .avatar{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 2rem;
+}
+
+.container .avatar img{
+    width: 3.5rem;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.container .avatar p span{
+    color: var(--White);
+    font-weight: 400;
+}
+
+.container .avatar p span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+
+.attribution { 
+    font-size: 16px; text-align: center; 
+}
+
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+    }
+
+@media (min-width: 500px) {
+    .container{
+        width: 360px;
+        margin:0 auto 1rem;
+    }
+    
+}
